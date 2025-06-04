@@ -11,7 +11,8 @@ export function ProjectsSection() {
             <div className="p-3 border border-primary/20 rounded bg-primary/5 flex flex-col h-full">
               <h3 className="text-green-500 font-bold">NexGen at USCIS</h3>
               <div className="flex-1 flex flex-col justify-center">
-                <pre className="text-xs my-2 text-muted-foreground text-center">
+                {/* Hide on mobile and tablet, show on lg and up */}
+                <pre className="hidden lg:block text-xs my-2 text-muted-foreground text-center">
                   {`
 +------------------------+   +------------------------+   +------------------------+
 |     FRONTEND (React)   |   |     BACKEND (Spring)   |   |      COLLABORATION     |
@@ -20,9 +21,36 @@ export function ProjectsSection() {
 | Feature enhancements   |   | PostgreSQL queries     |   | UX feedback loops      |
 | Hook-based logic       |   | Business logic updates |   | Agile sprint planning  |
 +------------------------+   +------------------------+   +------------------------+
-
     `}
                 </pre>
+                {/* Show on tablet only (md to lg) */}
+                <pre className="hidden md:block lg:hidden text-xs my-2 text-muted-foreground text-center">
+                  {`
++------------------------+   +------------------------+
+|     FRONTEND (React)   |   |     BACKEND (Spring)   |
++------------------------+   +------------------------+
+| Built UI components    |   | API integration        |
+| Feature enhancements   |   | PostgreSQL queries     |
+| Hook-based logic       |   | Business logic updates |
++------------------------+   +------------------------+ 
++------------------------+
+|      COLLABORATION     |
++------------------------+
+| Design review sessions |
+| UX feedback loops      |
+| Agile sprint planning  |
++------------------------+
+    `}
+                </pre>
+                {/* Show on mobile only */}
+                <div className="block md:hidden text-xs my-2 text-muted-foreground">
+                  <div className="space-y-2">
+                    <div className="text-center font-semibold">Key Areas:</div>
+                    <div>• Frontend (React) - UI components & features</div>
+                    <div>• Backend (Spring) - API integration & PostgreSQL</div>
+                    <div>• Collaboration - Design reviews & Agile planning</div>
+                  </div>
+                </div>
               </div>
               <div className="mt-auto">
                 <p className="text-sm mb-2">
@@ -47,7 +75,8 @@ export function ProjectsSection() {
                 Internal Support Portal for Marines
               </h3>
               <div className="flex-1 flex flex-col justify-center">
-                <pre className="text-xs my-2 text-muted-foreground text-center">
+                {/* Hide on mobile and tablet, show on lg and up */}
+                <pre className="hidden lg:block text-xs my-2 text-muted-foreground text-center">
                   {`
 +-------------------------+   +---------------------------+   +------------------------+
 |         DESIGN          |   |       IMPLEMENTATION      |   |     COLLABORATION      |
@@ -58,6 +87,36 @@ export function ProjectsSection() {
 +-------------------------+   +---------------------------+   +------------------------+
     `}
                 </pre>
+                {/* Show on tablet only (md to lg) */}
+                <pre className="hidden md:block lg:hidden text-xs my-2 text-muted-foreground text-center">
+                  {`
++-------------------------+   +---------------------------+
+|         DESIGN          |   |       IMPLEMENTATION      |
++-------------------------+   +---------------------------+
+| User flows & wireframes |   | HTML/CSS layout           |
+| High-fidelity mockups   |   | Angular component styling |
+| UX decisions & testing  |   | Accessibility review      |
++-------------------------+   +---------------------------+
++------------------------+
+|     COLLABORATION      |
++------------------------+
+| Feedback sessions      |
+| Cross-team iteration   |
+| Stakeholder approval   |
++------------------------+
+    `}
+                </pre>
+                {/* Show on mobile only */}
+                <div className="block md:hidden text-xs my-2 text-muted-foreground">
+                  <div className="space-y-2">
+                    <div className="text-center font-semibold">Key Areas:</div>
+                    <div>• Design - User flows, wireframes & mockups</div>
+                    <div>• Implementation - HTML/CSS & Angular styling</div>
+                    <div>
+                      • Collaboration - Stakeholder feedback & iteration
+                    </div>
+                  </div>
+                </div>
               </div>
               <div className="mt-auto">
                 <p className="text-sm mb-2">
