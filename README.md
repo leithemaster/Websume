@@ -17,13 +17,15 @@ Welcome to my interactive terminal-style Websume(web-base resume)!
 
 ## 📂 Structure
 
+```text
 ├── public/
 ├── src/
-│ ├── components/
-│ ├── data/
-│ └── App.jsx
+│   ├── components/
+│   ├── data/
+│   └── App.jsx
 ├── README.md
 └── package.json
+```
 
 ## 🧠 Motivation
 
