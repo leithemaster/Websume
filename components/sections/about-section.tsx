@@ -43,7 +43,7 @@ export function AboutSection() {
             </p>
           </div>
           <div className="mt-2 p-3 border border-primary/20 rounded bg-primary/5">
-            <h3 className="text-primary font-bold mb-2 font-myFont">
+            <h3 className="text-green-500 font-bold mb-2 font-myFont">
               Personal Bio:
             </h3>
             <div className="space-y-2 text-sm">
@@ -59,7 +59,7 @@ export function AboutSection() {
             </div>
           </div>
           <div className="mt-2 p-3 border border-primary/20 rounded bg-primary/5">
-            <h3 className="text-primary font-bold mb-2 font-myFont">
+            <h3 className="text-green-500 font-bold mb-2 font-myFont">
               Quick Facts:
             </h3>
             <ul className="space-y-1">

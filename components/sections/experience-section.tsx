@@ -12,7 +12,7 @@ export function ExperienceSection() {
             <h3 className="font-bold font-myFont text-green-500">
               Full Stack Developer
             </h3>
-            <p className="text-xs text-muted-foreground font-myFont">
+            <p className="text-xs text-muted-foreground text-blue-400 font-myFont">
               Sev1tech, Arlingto, VA | Feb 2022 - August 2024
             </p>
           </div>
@@ -42,7 +42,7 @@ export function ExperienceSection() {
             <h3 className="font-bold font-myFont text-green-500">
               UI/UX Designer & Frontend Developer
             </h3>
-            <p className="text-xs text-muted-foreground font-myFont">
+            <p className="text-xs text-muted-foreground text-blue-400 font-myFont">
               Geocent, Arlington, VA | May 2019 - February 2022
             </p>
           </div>
@@ -72,7 +72,7 @@ export function ExperienceSection() {
             <h3 className="font-bold font-myFont text-green-500">
               Full Stack Developer
             </h3>
-            <p className="text-xs text-muted-foreground">
+            <p className="text-xs text-muted-foreground text-blue-400 font-myFont">
               Fund Diet, Winter Park, FL | June 2018 - May 2019
             </p>
           </div>

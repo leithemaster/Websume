@@ -46,9 +46,9 @@ export function ContactSection() {
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center text-sm hover:text-primary
-            text-green-500 font-myFont transition-colors"
+            text-blue-400 font-myFont transition-colors"
           >
-            <File className="h-4 w-4 mr-2 font-myFont text-green-500" />
+            <File className="h-4 w-4 mr-2 font-myFont text-blue-400" />
             Download Resume Here
           </a>
         </div>

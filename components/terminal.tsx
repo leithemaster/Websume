@@ -142,7 +142,7 @@ export default function Terminal() {
 
       case "ls":
         output = (
-          <div className="space-y-2 text-white">
+          <div className="space-y-2 text-blue-400">
             <p>about education skills experience projects contact</p>
           </div>
         );
