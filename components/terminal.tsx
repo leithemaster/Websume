@@ -20,6 +20,7 @@ import { ExperienceSection } from "@/components/sections/experience-section";
 import { ProjectsSection } from "@/components/sections/projects-section";
 import { ContactSection } from "@/components/sections/contact-section";
 import { ImageAsciiLogo } from "@/components/image-ascii-logo";
+import { SimpleAsciiLogo } from "./simple-ascii-logo";
 
 type Command = {
   input: string;
@@ -116,6 +117,10 @@ export default function Terminal() {
               <li>
                 <span className="text-white font-bold">contact</span> - Get my
                 contact information
+              </li>
+              <li>
+                <span className="text-white font-bold">display -a</span> -
+                Display all sections
               </li>
               <li>
                 <span className="text-white font-bold">clear</span> - Clear the
@@ -231,6 +236,29 @@ export default function Terminal() {
           </div>
         );
         setCurrentSection(null);
+        break;
+
+      case "test":
+        output = (
+          <div className="flex justify-center">
+            <SimpleAsciiLogo />
+          </div>
+        );
+        setCurrentSection(null);
+        break;
+
+      case "display -a":
+        output = (
+          <div className="space-y-4">
+            <AboutSection />
+            <EducationSection />
+            <SkillsSection />
+            <ExperienceSection />
+            <ProjectsSection />
+            <ContactSection />
+          </div>
+        );
+        setCurrentSection("full-resume");
         break;
 
       default:
