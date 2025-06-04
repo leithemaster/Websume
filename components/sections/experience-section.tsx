@@ -1,0 +1,97 @@
+import { AsciiArt } from "@/components/ascii-art";
+
+export function ExperienceSection() {
+  return (
+    <div className="space-y-4">
+      <AsciiArt art="experience" />
+
+      <div className="space-y-6">
+        <div className="relative pl-5 border-l border-primary/30">
+          <div className="absolute w-3 h-3 bg-primary rounded-full -left-[6.5px] top-1" />
+          <div className="mb-1">
+            <h3 className="font-bold font-myFont text-green-500">
+              Full Stack Developer
+            </h3>
+            <p className="text-xs text-muted-foreground font-myFont">
+              Sev1tech, Arlingto, VA | Feb 2022 - August 2024
+            </p>
+          </div>
+          <ul className="text-sm space-y-1 list-disc pl-4 font-myFont">
+            <li>
+              Built internal web tools and dashboards using React, TypeScript,
+              and Node.js, improving team efficiency and data visibility.
+            </li>
+            <li>
+              Built internal web tools and dashboards using React, TypeScript,
+              and Node.js, improving team efficiency and data visibility.
+            </li>
+            <li>
+              Collaborated cross-functionally with UX designers, product owners,
+              and QA to deliver features in agile sprints.
+            </li>
+            <li>
+              Led performance optimization efforts, reducing load times by up to
+              30% through refactoring and smarter API handling.
+            </li>
+          </ul>
+        </div>
+
+        <div className="relative pl-5 border-l border-primary/30">
+          <div className="absolute w-3 h-3 bg-primary rounded-full -left-[6.5px] top-1" />
+          <div className="mb-1">
+            <h3 className="font-bold font-myFont text-green-500">
+              UI/UX Designer & Frontend Developer
+            </h3>
+            <p className="text-xs text-muted-foreground font-myFont">
+              Geocent, Arlington, VA | May 2019 - February 2022
+            </p>
+          </div>
+          <ul className="text-sm space-y-1 list-disc pl-4 font-myFont">
+            <li>
+              Created wireframes, prototypes, and high-fidelity mockups for web
+              applications used by government clients.
+            </li>
+            <li>
+              Conducted user research and usability testing to inform design
+              decisions and improve task completion rates.
+            </li>
+            <li>
+              Worked closely with developers to ensure design handoffs were
+              clean, consistent, and technically feasible.
+            </li>
+            <li>
+              Helped implement accessibility best practices and performed audits
+              to align with federal 508 compliance.
+            </li>
+          </ul>
+        </div>
+
+        <div className="relative pl-5 border-l border-primary/30">
+          <div className="absolute w-3 h-3 bg-primary rounded-full -left-[6.5px] top-1" />
+          <div className="mb-1">
+            <h3 className="font-bold font-myFont text-green-500">
+              Full Stack Developer
+            </h3>
+            <p className="text-xs text-muted-foreground">
+              Fund Diet, Winter Park, FL | June 2018 - May 2019
+            </p>
+          </div>
+          <ul className="text-sm space-y-1 list-disc pl-4 font-myFont">
+            <li>
+              Developed and maintained hybrid and native mobile apps using React
+              Native and the MVVM pattern for both iOS and Android.
+            </li>
+            <li>
+              Collaborated with design and product teams to turn ideas into
+              clean, responsive interfaces and smooth user experiences.
+            </li>
+            <li>
+              Managed source control with GitHub and used JIRA to track progress
+              in agile sprints, delivering features on schedule.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+}
