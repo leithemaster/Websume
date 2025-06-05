@@ -309,6 +309,20 @@ export default function Terminal() {
     }
   };
 
+  const handleButtonClick = (command: string) => {
+    setInput(command);
+    handleSubmit({ preventDefault: () => {} } as React.FormEvent);
+  };
+
+  const navButtons = [
+    { command: "about", icon: User, label: "About" },
+    { command: "education", icon: GraduationCap, label: "Education" },
+    { command: "skills", icon: Shield, label: "Skills" },
+    { command: "experience", icon: Briefcase, label: "Experience" },
+    { command: "projects", icon: Code, label: "Projects" },
+    { command: "contact", icon: Mail, label: "Contact" },
+  ];
+
   return (
     <div className="flex flex-col h-full">
       <div className="bg-black border border-white/30 rounded-t-md p-2 flex items-center">
@@ -351,78 +365,64 @@ export default function Terminal() {
       </div>
 
       <nav className="mt-4 flex flex-wrap justify-center gap-2">
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => {
-            setInput("about");
-            handleSubmit({ preventDefault: () => {} } as React.FormEvent);
-          }}
-          className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30"
-        >
-          <User className="h-3 w-3 mr-1" />
-          About
-        </Button>
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => {
-            setInput("education");
-            handleSubmit({ preventDefault: () => {} } as React.FormEvent);
-          }}
-          className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30"
-        >
-          <GraduationCap className="h-3 w-3 mr-1" />
-          Education
-        </Button>
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => {
-            setInput("skills");
-            handleSubmit({ preventDefault: () => {} } as React.FormEvent);
-          }}
-          className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30"
-        >
-          <Shield className="h-3 w-3 mr-1" />
-          Skills
-        </Button>
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => {
-            setInput("experience");
-            handleSubmit({ preventDefault: () => {} } as React.FormEvent);
-          }}
-          className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30"
-        >
-          <Briefcase className="h-3 w-3 mr-1" />
-          Experience
-        </Button>
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => {
-            setInput("projects");
-            handleSubmit({ preventDefault: () => {} } as React.FormEvent);
-          }}
-          className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30"
-        >
-          <Code className="h-3 w-3 mr-1" />
-          Projects
-        </Button>
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => {
-            setInput("contact");
-            handleSubmit({ preventDefault: () => {} } as React.FormEvent);
-          }}
-          className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30"
-        >
-          <Mail className="h-3 w-3 mr-1" />
-          Contact
-        </Button>
+        {navButtons.map(({ command, icon: Icon, label }) => (
+          <Button
+            key={command}
+            variant="outline"
+            size="sm"
+            onClick={() => {
+              const cmd = command.toLowerCase();
+              let output: React.ReactNode;
+
+              // Process command directly without showing input
+              switch (cmd) {
+                case "about":
+                  output = <AboutSection />;
+                  setCurrentSection("about");
+                  break;
+                case "education":
+                  output = <EducationSection />;
+                  setCurrentSection("education");
+                  break;
+                case "skills":
+                  output = <SkillsSection />;
+                  setCurrentSection("skills");
+                  break;
+                case "experience":
+                  output = <ExperienceSection />;
+                  setCurrentSection("experience");
+                  break;
+                case "projects":
+                  output = <ProjectsSection />;
+                  setCurrentSection("projects");
+                  break;
+                case "contact":
+                  output = <ContactSection />;
+                  setCurrentSection("contact");
+                  break;
+                default:
+                  output = (
+                    <p className="text-white">Command not found: {cmd}</p>
+                  );
+                  setCurrentSection(null);
+              }
+
+              // Add command to history
+              setCommandHistory((prev) => [
+                ...prev,
+                {
+                  input: cmd,
+                  output,
+                  timestamp: new Date(),
+                },
+              ]);
+            }}
+            className="text-xs bg-black/50 hover:bg-black/70 text-white border-white/30"
+          >
+            <Icon className="h-3 w-3 mr-1" />
+            {label}
+          </Button>
+        ))}
       </nav>
     </div>
   );
