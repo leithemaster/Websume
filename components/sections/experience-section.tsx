@@ -19,19 +19,20 @@ export function ExperienceSection() {
           <ul className="text-sm space-y-1 list-disc pl-4 font-myFont">
             <li>
               Built internal web tools and dashboards using React, TypeScript,
-              and Node.js, improving team efficiency and data visibility.
+              and Java (Spring Boot), improving team workflows and surfacing key
+              metrics.
             </li>
             <li>
-              Built internal web tools and dashboards using React, TypeScript,
-              and Node.js, improving team efficiency and data visibility.
-            </li>
-            <li>
-              Collaborated cross-functionally with UX designers, product owners,
-              and QA to deliver features in agile sprints.
+              Partnered with UX, product, and QA teams to deliver user-centric
+              features on time in fast-paced agile sprints.
             </li>
             <li>
               Led performance optimization efforts, reducing load times by up to
-              30% through refactoring and smarter API handling.
+              30% through code refactoring and efficient API integration.
+            </li>
+            <li>
+              Improved the user interface to enhance usability and deliver a
+              smoother, more intuitive user experience.
             </li>
           </ul>
         </div>
