@@ -13,7 +13,7 @@ export function ExperienceSection() {
               Full Stack Developer
             </h3>
             <p className="text-xs text-muted-foreground text-blue-400 font-myFont">
-              Sev1tech, Arlingto, VA | Feb 2022 - August 2024
+              Sev1tech, Arlington, VA | Feb 2022 - August 2024
             </p>
           </div>
           <ul className="text-sm space-y-1 list-disc pl-4 font-myFont">
